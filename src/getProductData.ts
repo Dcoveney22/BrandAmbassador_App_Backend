@@ -8,24 +8,35 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 class DataFinder {
-    firstDataArray: BrandSKU[] = [];
+    // firstDataArray: BrandSKU[] = [];
+    // data: BrandSKU[] = []
 public async findData(){
-    let data = await supabase
+    const { data, error } = await supabase
   .from('stockSheet')
   .select('*')
-  this.firstDataArray.push(new BrandSKU(
-    data.Brand, 
-    data.SKU, 
-    data.CL, 
-    data.ABV, 
-    data.Ex_Works, 
-    data.Wholesale, 
-    data.On_Trade, 
-    data.RRP
-)
-);
-    console.log(this.firstDataArray);
+  // console.log(data);
+  if (error) {
+    console.log("there was an error");    
+  }
+  if (data) {
+    const productList = data.map(ref => 
+      new BrandSKU(
+      ref.Brand, 
+      ref.SKU, 
+      ref.CL, 
+      ref.ABV, 
+      ref.Ex_Works, 
+      ref.Wholesale, 
+      ref.On_Trade, 
+      ref.RRP
+    )
+  )
+   console.log(productList);
+   
+  }
+    // console.log(this.firstDataArray);
           }
         }
     const dataFinder = new DataFinder()
     dataFinder.findData()
+    
