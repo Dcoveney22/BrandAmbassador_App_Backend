@@ -29,7 +29,7 @@ Total: number | null;
         Retail_Activations: number | null,
         Other_Retail_Activations: number | null,
         Amazon_Marketing: number | null,
-        POS_Budget: string | null,
+        POS_Budget: number | null,
         On_Trade_Activations: number | null,
         On_Trade_Listing_Fee: number | null,
         On_Trade_Staff_Incentives: number | null,
