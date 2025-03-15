@@ -7,10 +7,12 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 // const supabaseKey = process.env.SUPABASE_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
-class DataFinder {
+
+
+export class ProductDataFinder {
     // firstDataArray: BrandSKU[] = [];
     // data: BrandSKU[] = []
-public async findData(){
+ public async findData(){
     const { data, error } = await supabase
   .from('stockSheet')
   .select('*')
@@ -31,12 +33,14 @@ public async findData(){
       ref.RRP
     )
   )
-   console.log(productList);
+  return productList
+  //  console.log(productList);
    
   }
+ 
     // console.log(this.firstDataArray);
           }
         }
-    const dataFinder = new DataFinder()
+    const dataFinder = new ProductDataFinder()
     dataFinder.findData()
     

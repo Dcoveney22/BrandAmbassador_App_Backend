@@ -7,7 +7,12 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 // const supabaseKey = process.env.SUPABASE_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
-class DataFinder {
+export const testdata = [{
+  name: "John",
+  Age: "23"
+}]
+
+export class MarketingDataFinder {
     // firstDataArray: BrandSKU[] = [];
     // data: BrandSKU[] = []
 public async findMarketingData(){
@@ -40,12 +45,13 @@ public async findMarketingData(){
       ref.Total,
     )
   )
-   console.log(budgets);
+  return budgets
+  //  console.log(budgets);
    
   }
     // console.log(this.firstDataArray);
           }
         }
-    const dataFinder = new DataFinder()
+    const dataFinder = new MarketingDataFinder()
     dataFinder.findMarketingData()
     

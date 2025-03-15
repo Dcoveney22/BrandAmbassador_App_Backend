@@ -1,6 +1,15 @@
 import express, { Request, Response } from "express";
 import env from "dotenv";
 import cors from "cors";
+import { ProductDataFinder } from "./getProductData";
+import { testdata } from "./getMarketingData";
+
+
+  const dataFinder = new ProductDataFinder()
+    let data = dataFinder.findData()
+    //  console.log(data)
+
+
 
 env.config();
 
@@ -14,11 +23,13 @@ const options: cors.CorsOptions = {
 app.use(cors(options));
 
 app.get("/stockSheet", (req: Request, res: Response) => {
-  setTimeout(() => {
-    res.json({ info: "This will have data" });
+  setTimeout(() => { 
+    
+    res.json( { testdata, data }) ;
   }, 3000);
 });
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
+  
 });
