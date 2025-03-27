@@ -30,7 +30,8 @@ export class ProductDataFinder {
       ref.Ex_Works, 
       ref.Wholesale, 
       ref.On_Trade, 
-      ref.RRP
+      ref.RRP,
+      ref.Product_Code
     )
   )
   return productList

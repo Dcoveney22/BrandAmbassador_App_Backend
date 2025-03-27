@@ -34,7 +34,7 @@ app.get("/marketingSheet", async (req: Request, res: Response) => {
   
   const data = await marketingFinder.findMarketingData()
   setTimeout(() => { 
-    res.json({ data }) ;
+    res.json( data ) ;
   }, 3000);
 });
 

@@ -7,10 +7,10 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 // const supabaseKey = process.env.SUPABASE_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
-export const testdata = [{
-  name: "John",
-  Age: "23"
-}]
+// export const testdata = [{
+//   name: "John",
+//   Age: "23"
+// }]
 
 export class MarketingDataFinder {
     // firstDataArray: BrandSKU[] = [];

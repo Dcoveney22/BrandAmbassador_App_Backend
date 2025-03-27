@@ -1,41 +1,41 @@
 
 export class MarketingBudget{
-Brand: string | null;
-Trade_Shows: number | null;
-Consumer_Shows: number | null;
-Digital_Marketing: number | null;
-Photography: number | null;
-PR: number | null;
-Wholesale_Activations: number | null
-Retail_Activations: number | null;
-Other_Retail_Activations: number | null;
-Amazon_Marketing: number | null;
-POS_Budget: number | null;
-On_Trade_Activations: number | null;
-On_Trade_Listing_Fee: number | null;
-On_Trade_Staff_Incentives: number | null;
-On_Trade_Entertainment: number | null;
-Incidentals: number | null;
-Total: number | null;
+Brand: string;
+Trade_Shows: number;
+Consumer_Shows: number;
+Digital_Marketing: number;
+Photography: number;
+PR: number;
+Wholesale_Activations: number;
+Retail_Activations: number;
+Other_Retail_Activations: number;
+Amazon_Marketing: number;
+POS_Budget: number;
+On_Trade_Activations: number;
+On_Trade_Listing_Fee: number;
+On_Trade_Staff_Incentives: number;
+On_Trade_Entertainment: number;
+Incidentals: number;
+Total: number;
 
     constructor(
-        Brand: string | null,
-        Trade_Shows: number | null,
-        Consumer_Shows: number | null,
-        Digital_Marketing: number | null,
-        Photography: number | null,
-        PR: number | null,
-        Wholesale_Activations: number | null,
-        Retail_Activations: number | null,
-        Other_Retail_Activations: number | null,
-        Amazon_Marketing: number | null,
-        POS_Budget: number | null,
-        On_Trade_Activations: number | null,
-        On_Trade_Listing_Fee: number | null,
-        On_Trade_Staff_Incentives: number | null,
-        On_Trade_Entertainment: number | null,
-        Incidentals: number | null,
-        Total: number | null,
+        Brand: string,
+        Trade_Shows: number,
+        Consumer_Shows: number,
+        Digital_Marketing: number,
+        Photography: number,
+        PR: number,
+        Wholesale_Activations: number,
+        Retail_Activations: number,
+        Other_Retail_Activations: number,
+        Amazon_Marketing: number,
+        POS_Budget: number,
+        On_Trade_Activations: number,
+        On_Trade_Listing_Fee: number,
+        On_Trade_Staff_Incentives: number,
+        On_Trade_Entertainment: number,
+        Incidentals: number,
+        Total: number,
         
         
     ){

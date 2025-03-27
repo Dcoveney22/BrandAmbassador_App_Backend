@@ -9,6 +9,7 @@ export class BrandSKU {
   Wholesale: number;
   On_Trade: number;
   RRP: number;
+  Product_Code: string;
 
   constructor(
     Brand: string,
@@ -19,6 +20,7 @@ export class BrandSKU {
     Wholesale: number,
     On_Trade: number,
     RRP: number,
+    Product_Code: string,
   ) {
     this.Brand = Brand;
     this.SKU = SKU;
@@ -28,5 +30,6 @@ export class BrandSKU {
     this.Wholesale = Wholesale;
     this.On_Trade = On_Trade;
     this.RRP = RRP;
+    this.Product_Code = Product_Code;
   }
 }
