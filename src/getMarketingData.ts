@@ -2,9 +2,8 @@
 import { createClient } from '@supabase/supabase-js'
 import { MarketingBudget } from './marketingTypes'
 
-const supabaseUrl = 'https://slmvuradrpbxzgbzrmaq.supabase.co'
-
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+const supabaseUrl=process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey= process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 // export const testdata = [{
@@ -15,7 +14,7 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 export class MarketingDataFinder {
     // firstDataArray: BrandSKU[] = [];
     // data: BrandSKU[] = []
-public async findMarketingData(){
+public async findMarketingData (){
     const { data, error } = await supabase
   .from('marketingBudgetSheet')
   .select('*')
