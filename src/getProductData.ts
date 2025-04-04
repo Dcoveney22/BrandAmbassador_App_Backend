@@ -3,8 +3,8 @@ import { createClient } from '@supabase/supabase-js'
 import { BrandSKU } from './skuTypes'
 
 const supabaseUrl = 'https://slmvuradrpbxzgbzrmaq.supabase.co'
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNsbXZ1cmFkcnBieHpnYnpybWFxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE0NDkzNDksImV4cCI6MjA1NzAyNTM0OX0.nAsoXdMjTRBnvmO5wJnEAhDC1EfJ-g6s0ToaEmDhNp0'
-// const supabaseKey = process.env.SUPABASE_KEY
+
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 
