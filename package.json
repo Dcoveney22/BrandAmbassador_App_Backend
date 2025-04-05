@@ -24,6 +24,7 @@
   },
   "description": "",
   "devDependencies": {
+    "@types/dotenv-webpack": "^7.0.8",
     "supabase": "^2.15.8"
   }
 }

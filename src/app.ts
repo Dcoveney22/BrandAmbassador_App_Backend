@@ -3,6 +3,7 @@ import env from "dotenv";
 import cors from "cors";
 import { ProductDataFinder } from "./getProductData";
 import { MarketingDataFinder } from "./getMarketingData";
+import { PriceTreeDataFinder } from "./getPriceTreeData";
 
 
   // const dataFinder = new ProductDataFinder()
@@ -10,6 +11,7 @@ import { MarketingDataFinder } from "./getMarketingData";
     //  console.log(data)
 const dataFinder = new ProductDataFinder()
 const marketingFinder = new MarketingDataFinder()
+const priceTreeFinder = new PriceTreeDataFinder()
 
 
 env.config();
@@ -37,6 +39,13 @@ app.get("/marketingSheet", async (req: Request, res: Response) => {
     res.json( data ) ;
   }, 3000);
 });
+
+app.get("/priceTreeData", async (req: Request, res: Response) => {
+  const data = await priceTreeFinder.findPriceTreeData()
+  setTimeout(() => {
+  res.json( data ) ;
+}, 3000);
+})
 
 
 app.listen(port, () => {
