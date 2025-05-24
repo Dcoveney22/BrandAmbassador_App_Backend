@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon ./src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "type": "module"
+    "type": "module",
+    "start": "npm run dev"
   },
   "author": "",
   "license": "ISC",
